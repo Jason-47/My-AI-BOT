@@ -16,7 +16,7 @@
                 
                 /*Get access token. Because the access token is a URL parameter it needs to be decoded*/
                 var accessToken = decodeURI(GetURLParameter('access_token'));
-                console.log(accessToken);
+                console.log('accessToken## '+accessToken);
                 
                     /*Use this function to get the access token from the URL*/
                 function GetURLParameter(sParam)
@@ -36,8 +36,9 @@
                 
                 //Create Account Record button click
                 $('#button').click(function(){
-                    
+                   
                     var accountName = $('#name').val();
+                     alert(accountName);
                     if(accountName!= ''){
                     //replace the below url with your domain name or yourInstance.salesforce.com
                         var requestUrl ='https://maneendranath-dev-ed.my.salesforce.com/services/data/v60.0/sobjects/Account/';
